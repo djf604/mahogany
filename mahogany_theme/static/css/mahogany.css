@@ -1,0 +1,25 @@
+/** Theme colors
+  * #353D06 -> Dark Green
+  * #99460F -> Mahogany
+  * #CEA32D -> Mustard Yellow
+  * #410B13 -> Dark Brown
+  * #E2DBB7 -> White Cream
+  */
+
+body{
+    background-color: #99460F;
+    color: #E2DBB7;
+    padding-top: 0;
+}
+
+a {
+    color: #CEA32D;
+    color: #E2DBB7;
+}
+
+.mahogany-major-heading{
+    font-family: 'Homemade Apple', cursive;
+}
+.breadcrumb {
+    background-color: #353D06;
+}

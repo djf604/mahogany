@@ -1,0 +1,59 @@
+{% extends 'pages/page.html' %}
+{% load static mezzanine_tags %}
+{% block extra_css %}
+<style>.mahogany-billboard{height:500px;}
+.mahogany-img{
+    max-height: 100px;
+    transition: -webkit-filter 2s;
+}
+.mahogany-img:hover{
+    -webkit-filter: grayscale(100%);
+}
+
+.mahogany-event{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #353D06;
+}
+
+.mahogany-event > .event-img {
+    height: 50%;
+    background-color: green;
+    background-size: cover;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: filter 0.3s, -webkit-filter 0.3s;
+}
+
+.mahogany-event > .event-img:hover {
+    filter: none;
+    -webkit-filter: none;
+}
+.mahogany-event > .event-img > img{
+    background-size: auto;
+}
+
+.mahogany-event > .event-content {
+{#    background-color: #353D06;#}
+}
+</style>
+{% endblock %}
+{% block all_content %}
+{#    <img src="{{ MEDIA_URL }}{{ page.background }}" class="mahogany-img">#}
+<h1>{{ page.homepage.heading }}</h1>
+    <div class="container">
+        <div class="row">
+            {% for event in events %}
+            <div class="col-sm-4 mahogany-event">
+                <div class="event-img" style="background-image:url({{ MEDIA_URL}}{{ event.image }});">
+                </div>
+                <div class="event-content">
+                    <h3>{{ event.name }}</h3>
+                    <span>{{ event.details }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

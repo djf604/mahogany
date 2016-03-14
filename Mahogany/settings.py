@@ -79,7 +79,7 @@ EXTRA_MODEL_FIELDS = (
         'mezzanine.pages.models.Page.background',
         'ImageField',
         (),
-        {'blank': True, 'null': True, 'upload_to': 'backgrounds'}
+        {'blank': True, 'null': True, 'upload_to': 'uploads/backgrounds'}
     ),
 )
 
@@ -107,7 +107,7 @@ ALLOWED_HOSTS = ['*']
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'US/Central'
 
 # If you set this to True, Django will use timezone-aware datetimes.
 USE_TZ = True

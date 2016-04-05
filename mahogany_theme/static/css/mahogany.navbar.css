@@ -84,7 +84,7 @@
 }
 
 footer{
-    background: url('/static/img/photo-four-dark.jpg') no-repeat center;
+    /*background: url('/static/img/photo-four-dark.jpg') no-repeat center;*/
     background-size: cover;
     height: 800px;
     border: none;
